@@ -63,4 +63,12 @@ public class CountryMap {
         
         throw new IllegalArgumentException("City not found: " + name);
     }
+
+        public City[] getCities() {
+            return cities;
+        }
+
+        public int[][] getRoutes() {
+            return routes;
+        }
 }

@@ -7,6 +7,8 @@ public class CountryMap {
     private City[] cities;
     private int[][] routes;
     private int cityCount;
+    private String firstCity;
+    private String lastCity;
 
     public CountryMap(int maxCities) {
         cities = new City[maxCities];
@@ -45,6 +47,12 @@ public class CountryMap {
             routes[index1][index2] = time;
             routes[index2][index1] = time; 
         }
+
+        line = scanner.nextLine().trim();
+        String[] startEnd = line.split(" ");
+        firstCity = startEnd[0];
+        lastCity = startEnd[1];
+
 
         scanner.close(); 
         System.out.println("File read is successful!");

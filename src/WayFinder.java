@@ -55,5 +55,28 @@ public class WayFinder {
             }
         }
 
+    if(cityDistance[lastCityNum] == Integer.MAX_VALUE) {
+        System.out.println("No path found");
+        return;
+    }
+
+    String[] way = new String[numCities];
+    int wayLength = 0;
+    for(int i = 0; i != -1; i = previousCity[i]) {
+        way[wayLength++] = cities[i].getCityName();
+    }
+
+    System.out.println("Shortes path: ");
+    for(int i = wayLength - 1; i >= 0; i--) {
+        System.out.println(way[i]);
+          if (i > 0) {
+            System.out.println(" -> ");
+        }
+    }
+    System.out.println();
+    System.out.println("Travel time: " + cityDistance[lastCityNum]);
+
+
+
     }
 }

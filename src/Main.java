@@ -5,7 +5,7 @@ public class Main {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter full path of the input file: ");
-            String filePath = scanner.nextLine(); // Kullanıcıdan tam dosya yolunu al
+            String filePath = scanner.nextLine(); 
 
             CountryMap map = new CountryMap(10);
             map.readFile(filePath);

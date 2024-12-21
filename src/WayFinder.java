@@ -68,7 +68,7 @@ public class WayFinder {
 
     System.out.println("Shortest path: ");
     for(int i = wayLength - 1; i >= 0; i--) {
-        System.out.println(way[i]);
+        System.out.print(way[i]);
           if (i > 0) {
             System.out.print(" -> ");
         }

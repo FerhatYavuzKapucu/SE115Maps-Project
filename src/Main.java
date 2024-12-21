@@ -1,17 +1,22 @@
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         try {
             
-            CountryMap map = new CountryMap(10);
-            map.readFile("map1.txt");
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter the input file name: ");
+            String fileName = input.nextLine();
 
-            // WayFinder ile kısa yolu bul
+            
+            CountryMap map = new CountryMap(10);
+            map.readFile(fileName);
+
+            
             WayFinder wayFinder = new WayFinder(map);
             wayFinder.findPath(map.getFirstCity(), map.getLastCity());
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
     }

@@ -31,6 +31,16 @@ public class WayFinder {
 
 
 
-          
+              for(int i = 0; i < numCities; i++);
+              int currentCity = -1;
+              int smallDistance = Integer.MAX_VALUE;
+                  for(int j = 0; j < numCities; j++) {
+                    if(!visitedCities[j] && cityDistance[j] < smallDistance){
+                        smallDistance = cityDistance[j];
+                        currentCity = j;
+                }
+            }
+
+            
     }
 }

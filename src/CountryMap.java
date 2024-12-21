@@ -59,7 +59,7 @@ public class CountryMap {
     }
 
 
-    private int getCityIndex(String name) {
+    int getCityIndex(String name) {
         for (int i = 0; i < cityCount; i++) {
             if (cities[i].getCityName().equals(name)) {
                 return cities[i].getCityIndex();
@@ -75,5 +75,12 @@ public class CountryMap {
 
         public int[][] getRoutes() {
             return routes;
+        }
+
+        public String getFirstCity() {
+            return firstCity;
+        }
+        public String getLastCity() {
+            return lastCity;
         }
 }

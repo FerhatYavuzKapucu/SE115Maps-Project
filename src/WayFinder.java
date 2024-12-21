@@ -31,7 +31,7 @@ public class WayFinder {
 
 
 
-              for(int i = 0; i < numCities; i++);
+              for(int i = 0; i < numCities; i++) {
               int currentCity = -1;
               int smallDistance = Integer.MAX_VALUE;
                   for(int j = 0; j < numCities; j++) {
@@ -41,6 +41,19 @@ public class WayFinder {
                 }
             }
 
-            
+            if (currentCity == -1) break;
+            visitedCities[currentCity] = true;
+
+            for (int a = 0; a < numCities; a++) {
+                if(routes[currentCity][a] > 0 && !visitedCities[a]) {
+                    int distance = cityDistance[currentCity] + routes[currentCity][a];
+                      if(distance < cityDistance[a]){
+                        cityDistance[a] = distance;
+                        previousCity[a] = currentCity;
+                    } 
+                }
+            }
+        }
+
     }
 }

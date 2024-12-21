@@ -62,15 +62,15 @@ public class WayFinder {
 
     String[] way = new String[numCities];
     int wayLength = 0;
-    for(int i = 0; i != -1; i = previousCity[i]) {
+    for(int i = lastCityNum; i != -1; i = previousCity[i]) {
         way[wayLength++] = cities[i].getCityName();
     }
 
-    System.out.println("Shortes path: ");
+    System.out.println("Shortest path: ");
     for(int i = wayLength - 1; i >= 0; i--) {
         System.out.println(way[i]);
           if (i > 0) {
-            System.out.println(" -> ");
+            System.out.print(" -> ");
         }
     }
     System.out.println();

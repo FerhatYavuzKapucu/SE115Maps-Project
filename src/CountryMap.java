@@ -77,10 +77,10 @@ public class CountryMap {
             return routes;
         }
 
-        public String getFirstCity() {
+        public String getFirstCity(){
             return firstCity;
         }
-        public String getLastCity() {
+        public String getLastCity(){
             return lastCity;
         }
 }
